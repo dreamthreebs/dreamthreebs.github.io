@@ -1,0 +1,636 @@
+<!DOCTYPE html><html><head>
+      <title>snippets</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/wangyiming/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.8.10/crossnote/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#bash" class="md-toc-link"><p>Bash</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#work-flow" class="md-toc-link">
+            <p>Work flow</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#ls-column-by-index" class="md-toc-link">
+            <p>ls column by index</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#find-how-many-works-are-running" class="md-toc-link">
+            <p>Find how many works are running</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#python" class="md-toc-link"><p>Python</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#algorithm" class="md-toc-link">
+            <p>Algorithm</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#ipython" class="md-toc-link">
+            <p>Ipython</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#healpy" class="md-toc-link">
+            <p>Healpy</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#numpy" class="md-toc-link">
+            <p>Numpy</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#fits-files-operation" class="md-toc-link">
+            <p>Fits files operation</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#h5-files-operation" class="md-toc-link">
+            <p>h5 files operation</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#sav-files-operation" class="md-toc-link">
+            <p>sav files operation</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#latex" class="md-toc-link">
+            <p>Latex</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#plots" class="md-toc-link">
+            <p>Plots</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#cmb-tasks" class="md-toc-link">
+            <p>CMB tasks</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#utils" class="md-toc-link">
+            <p>Utils</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#docs" class="md-toc-link"><p>Docs</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#tips" class="md-toc-link">
+            <p>tips</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#keywords-argment" class="md-toc-link">
+            <p>keywords argment</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#special-parameters" class="md-toc-link">
+            <p>Special parameters</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#walrus-operator" class="md-toc-link">
+            <p>walrus operator</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#looping-techniques" class="md-toc-link">
+            <p>Looping Techniques</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#formatted-string" class="md-toc-link">
+            <p>formatted string</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#save-list-and-dict-in-a-json-file" class="md-toc-link">
+            <p>save list and dict in a json file</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#namespace" class="md-toc-link">
+            <p>namespace</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#static-method" class="md-toc-link">
+            <p>static method</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#super-method" class="md-toc-link">
+            <p>super method</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#dataclass" class="md-toc-link">
+            <p>dataclass</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#python-directory-structure" class="md-toc-link">
+            <p>python directory structure</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#iterable-and-iterator" class="md-toc-link">
+            <p>iterable and iterator</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#archlinux" class="md-toc-link"><p>ArchLinux</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#pacman" class="md-toc-link">
+            <p>pacman</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+</div>
+<h1 id="bash">Bash </h1>
+<h2 id="work-flow">Work flow </h2>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token comment"># 原始文件名称</span>
+<span class="token assign-left variable">original_file</span><span class="token operator">=</span><span class="token string">"calc.py"</span>
+
+<span class="token comment"># 复制文件的数量</span>
+<span class="token assign-left variable">copies</span><span class="token operator">=</span><span class="token number">50</span>
+
+<span class="token keyword keyword-for">for</span> <span class="token for-or-select variable">i</span> <span class="token keyword keyword-in">in</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">seq</span> <span class="token number">1</span> $copies<span class="token variable">)</span></span><span class="token punctuation">;</span> <span class="token keyword keyword-do">do</span>
+    <span class="token comment"># 创建新文件的名称</span>
+    <span class="token assign-left variable">new_file</span><span class="token operator">=</span><span class="token string">"calc_<span class="token variable">$i</span>.py"</span>
+
+    <span class="token comment"># 复制原始文件到新文件</span>
+    <span class="token function">cp</span> <span class="token variable">$original_file</span> <span class="token variable">$new_file</span>
+
+    <span class="token comment"># 在第10行替换文本</span>
+    <span class="token function">sed</span> <span class="token parameter variable">-i</span> <span class="token string">"5s/i=0/i=<span class="token variable">$i</span>/"</span> <span class="token variable">$new_file</span>
+<span class="token keyword keyword-done">done</span>
+</code></pre><h2 id="ls-column-by-index">ls column by index </h2>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token function">ls</span> <span class="token parameter variable">-i</span> submit_*.sh<span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print $2}'</span> <span class="token operator">|</span> <span class="token function">sort</span> <span class="token parameter variable">-V</span>
+</code></pre><h2 id="find-how-many-works-are-running">Find how many works are running </h2>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>squeue <span class="token parameter variable">-u</span> wangyiming25 <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">' R '</span> <span class="token operator">|</span> <span class="token function">wc</span> <span class="token parameter variable">-l</span>
+squeue <span class="token parameter variable">-u</span> wangyiming25 <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">' PD '</span> <span class="token operator">|</span> <span class="token function">wc</span> <span class="token parameter variable">-l</span>
+</code></pre><h1 id="python">Python </h1>
+<h2 id="algorithm">Algorithm </h2>
+<ul>
+<li>interpolation on lg scale</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">log_Cubic_interpolate</span><span class="token punctuation">(</span>xx<span class="token punctuation">,</span>yy<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    logx<span class="token operator">=</span>np<span class="token punctuation">.</span>log10<span class="token punctuation">(</span>xx<span class="token punctuation">)</span>
+    logy<span class="token operator">=</span>np<span class="token punctuation">.</span>log10<span class="token punctuation">(</span>yy<span class="token punctuation">)</span>
+    Cubic_interp<span class="token operator">=</span>CubicSpline<span class="token punctuation">(</span>logx<span class="token punctuation">,</span>logy<span class="token punctuation">)</span>
+    log_Cubic_interp<span class="token operator">=</span><span class="token keyword keyword-lambda">lambda</span> zz<span class="token punctuation">:</span> np<span class="token punctuation">.</span>power<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> Cubic_interp<span class="token punctuation">(</span>np<span class="token punctuation">.</span>log10<span class="token punctuation">(</span>zz<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> log_Cubic_interp
+</code></pre><h2 id="ipython">Ipython </h2>
+<ul>
+<li>%pylab [--no-import-all]</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-import">import</span> numpy
+<span class="token keyword keyword-import">import</span> matplotlib
+<span class="token keyword keyword-from">from</span> matplotlib <span class="token keyword keyword-import">import</span> pylab<span class="token punctuation">,</span> mlab<span class="token punctuation">,</span> pyplot
+np <span class="token operator">=</span> numpy
+plt <span class="token operator">=</span> pyplot
+
+<span class="token keyword keyword-from">from</span> IPython<span class="token punctuation">.</span>display <span class="token keyword keyword-import">import</span> display
+<span class="token keyword keyword-from">from</span> IPython<span class="token punctuation">.</span>core<span class="token punctuation">.</span>pylabtools <span class="token keyword keyword-import">import</span> figsize<span class="token punctuation">,</span> getfigs
+</code></pre><h2 id="healpy">Healpy </h2>
+<ul>
+<li>square mask</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">mask_square</span><span class="token punctuation">(</span>_mask<span class="token punctuation">,</span> square_length<span class="token operator">=</span>np<span class="token punctuation">.</span>radians<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span> square_width<span class="token operator">=</span>np<span class="token punctuation">.</span>radians<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token operator">/</span><span class="token punctuation">,</span> mask_value<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    <span class="token comment"># square_length = np.radians(6) # longitude</span>
+    <span class="token comment"># square_width = np.radians(5) # latitude</span>
+
+    p1_theta <span class="token operator">=</span> l0 <span class="token operator">-</span> square_width <span class="token operator">/</span> <span class="token number">2</span>
+    p2_theta <span class="token operator">=</span> l0 <span class="token operator">-</span> square_width <span class="token operator">/</span> <span class="token number">2</span>
+    p3_theta <span class="token operator">=</span> l0 <span class="token operator">+</span> square_width <span class="token operator">/</span> <span class="token number">2</span>
+    p4_theta <span class="token operator">=</span> l0 <span class="token operator">+</span> square_width <span class="token operator">/</span> <span class="token number">2</span>
+
+    p1_phi <span class="token operator">=</span> b0 <span class="token operator">-</span> square_length <span class="token operator">/</span> <span class="token number">2</span>
+    p2_phi <span class="token operator">=</span> b0 <span class="token operator">+</span> square_length <span class="token operator">/</span> <span class="token number">2</span>
+    p3_phi <span class="token operator">=</span> b0 <span class="token operator">+</span> square_length <span class="token operator">/</span> <span class="token number">2</span>
+    p4_phi <span class="token operator">=</span> b0 <span class="token operator">-</span> square_length <span class="token operator">/</span> <span class="token number">2</span>
+
+    p1_vec <span class="token operator">=</span> hp<span class="token punctuation">.</span>rotator<span class="token punctuation">.</span>dir2vec<span class="token punctuation">(</span>theta <span class="token operator">=</span> p1_theta<span class="token punctuation">,</span> phi<span class="token operator">=</span>p1_phi<span class="token punctuation">)</span>
+    p2_vec <span class="token operator">=</span> hp<span class="token punctuation">.</span>rotator<span class="token punctuation">.</span>dir2vec<span class="token punctuation">(</span>theta <span class="token operator">=</span> p2_theta<span class="token punctuation">,</span> phi<span class="token operator">=</span>p2_phi<span class="token punctuation">)</span>
+    p3_vec <span class="token operator">=</span> hp<span class="token punctuation">.</span>rotator<span class="token punctuation">.</span>dir2vec<span class="token punctuation">(</span>theta <span class="token operator">=</span> p3_theta<span class="token punctuation">,</span> phi<span class="token operator">=</span>p3_phi<span class="token punctuation">)</span>
+    p4_vec <span class="token operator">=</span> hp<span class="token punctuation">.</span>rotator<span class="token punctuation">.</span>dir2vec<span class="token punctuation">(</span>theta <span class="token operator">=</span> p4_theta<span class="token punctuation">,</span> phi<span class="token operator">=</span>p4_phi<span class="token punctuation">)</span>
+
+    vertices <span class="token operator">=</span> np<span class="token punctuation">.</span>vstack<span class="token punctuation">(</span><span class="token punctuation">(</span>p1_vec<span class="token punctuation">,</span>p2_vec<span class="token punctuation">,</span>p3_vec<span class="token punctuation">,</span>p4_vec<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>vertices<span class="token punctuation">.</span>shape<span class="token operator">=</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+
+    ipix_strip <span class="token operator">=</span> hp<span class="token punctuation">.</span>query_polygon<span class="token punctuation">(</span>nside<span class="token operator">=</span>nside<span class="token punctuation">,</span> vertices<span class="token operator">=</span> vertices<span class="token punctuation">)</span>
+    _mask<span class="token punctuation">[</span>ipix_strip<span class="token punctuation">]</span> <span class="token operator">=</span> mask_value
+    <span class="token keyword keyword-return">return</span> _mask
+</code></pre><ul>
+<li>disc mask</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>centerVec <span class="token operator">=</span> hp<span class="token punctuation">.</span>rotator<span class="token punctuation">.</span>dir2vec<span class="token punctuation">(</span>theta <span class="token operator">=</span> np<span class="token punctuation">.</span>pi<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">,</span> phi <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+ipix_disc <span class="token operator">=</span> hp<span class="token punctuation">.</span>query_disc<span class="token punctuation">(</span>nside<span class="token operator">=</span>nside<span class="token punctuation">,</span> vec<span class="token operator">=</span>centerVec<span class="token punctuation">,</span> radius<span class="token operator">=</span>np<span class="token punctuation">.</span>radians<span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+mask<span class="token punctuation">[</span>ipix_disc<span class="token punctuation">]</span> <span class="token operator">=</span> disc_value
+</code></pre><ul>
+<li>strip mask</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>ipix_strip <span class="token operator">=</span> hp<span class="token punctuation">.</span>query_strip<span class="token punctuation">(</span>nside<span class="token operator">=</span>nside<span class="token punctuation">,</span> theta1<span class="token operator">=</span>np<span class="token punctuation">.</span>pi<span class="token operator">/</span><span class="token number">2</span><span class="token operator">-</span>np<span class="token punctuation">.</span>radians<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">,</span> theta2<span class="token operator">=</span>np<span class="token punctuation">.</span>pi<span class="token operator">/</span><span class="token number">2</span><span class="token operator">+</span>np<span class="token punctuation">.</span>radians<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span>
+mask<span class="token punctuation">[</span>ipix_strip<span class="token punctuation">]</span> <span class="token operator">=</span> strip_value
+</code></pre><h2 id="numpy">Numpy </h2>
+<ul>
+<li>np.where:numpy.where(condition, [x, y, ]/);for condition:Where True, yield x, otherwise yield y.</li>
+</ul>
+<h2 id="fits-files-operation">Fits files operation </h2>
+<ul>
+<li>check the header name of a fits file</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-from">from</span> astropy<span class="token punctuation">.</span>io <span class="token keyword keyword-import">import</span> fits
+hdul <span class="token operator">=</span> fits<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>filename<span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">repr</span><span class="token punctuation">(</span>hdul<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>header<span class="token punctuation">)</span><span class="token punctuation">)</span>
+hdul<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><ul>
+<li>check the info</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>hdul<span class="token punctuation">.</span>info<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><ul>
+<li>check the data and its type(planck cls fits)</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>hdul<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>data
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>l<span class="token operator">*</span><span class="token punctuation">(</span>l<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span>hdul<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token string">"C_2_2"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">/</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">*</span>np<span class="token punctuation">.</span>pi<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre><h2 id="h5-files-operation">h5 files operation </h2>
+<ul>
+<li>open h5 files</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-import">import</span> h5py
+<span class="token keyword keyword-def">def</span> <span class="token function">open_h5_file</span><span class="token punctuation">(</span>filename<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-with">with</span> h5py<span class="token punctuation">.</span>File<span class="token punctuation">(</span>filename<span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> f<span class="token punctuation">:</span>
+        dset<span class="token operator">=</span>np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>f<span class="token punctuation">[</span><span class="token string">'intermediate_map'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword keyword-return">return</span> dset
+</code></pre><ul>
+<li>get colomn name of h5 file</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token builtin">list</span><span class="token punctuation">(</span>f<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+dset<span class="token operator">=</span>f<span class="token punctuation">[</span><span class="token string">'intermediate_map'</span><span class="token punctuation">]</span>
+dset<span class="token punctuation">.</span>attrs<span class="token punctuation">[</span><span class="token string">'colname'</span><span class="token punctuation">]</span>
+</code></pre><h2 id="sav-files-operation">sav files operation </h2>
+<ul>
+<li>load sav files</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-from">from</span> scipy<span class="token punctuation">.</span>io <span class="token keyword keyword-import">import</span> readsav
+data <span class="token operator">=</span> readsav<span class="token punctuation">(</span>your_file<span class="token punctuation">,</span> python_dict<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> verbose<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+</code></pre><h2 id="latex">Latex </h2>
+<ul>
+<li>plot in latex</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-from">from</span> matplotlib<span class="token punctuation">.</span>font_manager <span class="token keyword keyword-import">import</span> FontProperties
+<span class="token keyword keyword-from">from</span> matplotlib <span class="token keyword keyword-import">import</span> rc
+rc<span class="token punctuation">(</span><span class="token string">'font'</span><span class="token punctuation">,</span><span class="token operator">**</span><span class="token punctuation">{</span><span class="token string">'family'</span><span class="token punctuation">:</span><span class="token string">'serif'</span><span class="token punctuation">,</span><span class="token string">'serif'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'Times'</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+rc<span class="token punctuation">(</span><span class="token string">'text'</span><span class="token punctuation">,</span> usetex<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+</code></pre><h2 id="plots">Plots </h2>
+<ul>
+<li>some codes for subplots</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>fig<span class="token punctuation">,</span> axes<span class="token operator">=</span> plt<span class="token punctuation">.</span>subplots<span class="token punctuation">(</span>nrows<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">,</span> ncols<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> sharex<span class="token operator">=</span><span class="token string">'col'</span><span class="token punctuation">,</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+fmt <span class="token operator">=</span> ticker<span class="token punctuation">.</span>FormatStrFormatter<span class="token punctuation">(</span><span class="token string">'%.1f'</span><span class="token punctuation">)</span>
+ax1<span class="token punctuation">.</span>yaxis<span class="token punctuation">.</span>set_major_formatter<span class="token punctuation">(</span>fmt<span class="token punctuation">)</span>
+ax1<span class="token operator">=</span>axes<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span>
+ax1<span class="token punctuation">.</span>set_ylabel<span class="token punctuation">(</span><span class="token string">'string'</span><span class="token punctuation">,</span>fontsize<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span>
+ax1<span class="token punctuation">.</span>set_ylim<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ax1<span class="token punctuation">.</span>tick_params<span class="token punctuation">(</span>bottom<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>top<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>left<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>right<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>which<span class="token operator">=</span><span class="token string">'both'</span><span class="token punctuation">,</span>direction<span class="token operator">=</span><span class="token string">'in'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>tight_layout<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>subplots_adjust<span class="token punctuation">(</span>hspace<span class="token operator">=</span><span class="token number">0.0</span><span class="token punctuation">)</span>
+fig<span class="token punctuation">.</span>align_ylabels<span class="token punctuation">(</span>axes<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+fig<span class="token punctuation">.</span>align_ylabels<span class="token punctuation">(</span>axes<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>savefig<span class="token punctuation">(</span><span class="token string">'string'</span><span class="token punctuation">,</span>dpi<span class="token operator">=</span><span class="token number">300</span><span class="token punctuation">,</span>pad_inches <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> bbox_inches<span class="token operator">=</span><span class="token string">'tight'</span><span class="token punctuation">)</span>
+</code></pre><h2 id="cmb-tasks">CMB tasks </h2>
+<ul>
+<li>get map depth for noise level</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">get_map_depth</span><span class="token punctuation">(</span>hit_num<span class="token punctuation">:</span><span class="token string">'the number hit the detector in long period'</span><span class="token punctuation">,</span>NET<span class="token punctuation">:</span><span class="token string">'muK sqrt(s)'</span><span class="token punctuation">,</span>sampling_freq<span class="token punctuation">:</span><span class="token string">'Hz'</span><span class="token punctuation">,</span>detector_freq<span class="token punctuation">:</span><span class="token string">'GHz'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    NET_set<span class="token operator">=</span>NET<span class="token operator">*</span>np<span class="token punctuation">.</span>ones<span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>hit_num<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    sampling_freq_set<span class="token operator">=</span>sampling_freq<span class="token operator">*</span>np<span class="token punctuation">.</span>ones<span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>hit_num<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    sigma<span class="token operator">=</span>NET_set<span class="token operator">/</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>hit_num<span class="token operator">/</span>sampling_freq_set<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> sigma
+</code></pre><ul>
+<li>multiply gaussian noise</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>normal<span class="token punctuation">(</span>loc<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> size<span class="token operator">=</span>your size<span class="token punctuation">)</span>
+</code></pre><ul>
+<li>convert inf to np.inf then to 0<br>
+import numpy as np</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Create a vector with some infinite elements</span>
+x <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token builtin">float</span><span class="token punctuation">(</span><span class="token string">'inf'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token builtin">float</span><span class="token punctuation">(</span><span class="token string">'inf'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Replace "inf" with numpy.inf</span>
+x<span class="token punctuation">[</span>x <span class="token operator">==</span> <span class="token builtin">float</span><span class="token punctuation">(</span><span class="token string">'inf'</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> np<span class="token punctuation">.</span>inf
+
+<span class="token comment"># Check which elements are infinite</span>
+mask <span class="token operator">=</span> np<span class="token punctuation">.</span>isinf<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+
+<span class="token comment"># Set infinite elements to zero</span>
+x<span class="token punctuation">[</span>mask<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>
+
+<span class="token comment"># Print the modified vector</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+</code></pre><ul>
+<li>rotate coordinate</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-import">import</span> healpy <span class="token keyword keyword-as">as</span> hp
+r <span class="token operator">=</span> hp<span class="token punctuation">.</span>Rotator<span class="token punctuation">(</span>coord<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'C'</span><span class="token punctuation">,</span><span class="token string">'G'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+mask_G <span class="token operator">=</span> r<span class="token punctuation">.</span>rotate_map_pixel<span class="token punctuation">(</span>mask<span class="token punctuation">)</span>
+</code></pre><ul>
+<li>get mask from variance map</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>np<span class="token punctuation">.</span>where<span class="token punctuation">(</span>map_variace<span class="token operator">&gt;</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
+</code></pre><h2 id="utils">Utils </h2>
+<ul>
+<li>work flow</li>
+</ul>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>python ~/bin/change_sbatch_name.py ~/work/dc2/ILC_test/test.py
+sbatch ~/bin/submit_sbatch.sh
+</code></pre><ul>
+<li>absolute path</li>
+</ul>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>/afs/ihep.ac.cn/users/w/wangyiming25/
+</code></pre><ul>
+<li>minimum import for test</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-import">import</span> numpy <span class="token keyword keyword-as">as</span> np
+<span class="token keyword keyword-import">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword keyword-as">as</span> plt
+<span class="token keyword keyword-import">import</span> healpy <span class="token keyword keyword-as">as</span> hp
+<span class="token keyword keyword-import">import</span> pandas <span class="token keyword keyword-as">as</span> pd
+<span class="token keyword keyword-import">import</span> glob
+<span class="token keyword keyword-import">import</span> os<span class="token punctuation">,</span>sys
+<span class="token keyword keyword-from">from</span> pathlib <span class="token keyword keyword-import">import</span> Path
+</code></pre><ul>
+<li>find files by python</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-import">import</span> glob
+<span class="token keyword keyword-def">def</span> <span class="token function">find_files</span><span class="token punctuation">(</span>directory<span class="token punctuation">,</span> prefix<span class="token punctuation">,</span> subfix<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-return">return</span> glob<span class="token punctuation">.</span>glob<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'</span><span class="token interpolation"><span class="token punctuation">{</span>directory<span class="token punctuation">}</span></span><span class="token string">/**/</span><span class="token interpolation"><span class="token punctuation">{</span>prefix<span class="token punctuation">}</span></span><span class="token string">*</span><span class="token interpolation"><span class="token punctuation">{</span>subfix<span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">,</span> recursive<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+</code></pre><ul>
+<li>print options</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>np<span class="token punctuation">.</span>set_printoptions<span class="token punctuation">(</span>threshold<span class="token operator">=</span>np<span class="token punctuation">.</span>inf<span class="token punctuation">)</span>
+pd<span class="token punctuation">.</span>set_option<span class="token punctuation">(</span><span class="token string">'display.max_rows'</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span>
+</code></pre><ul>
+<li>debugger</li>
+</ul>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>python <span class="token parameter variable">-m</span> pdb your_python_code
+</code></pre><ul>
+<li>name variable</li>
+</ul>
+<pre data-role="codeBlock" data-info="" class="language-text text"><code>tmp:temporary
+res:result
+cnt:count
+idx:index
+sum:summary
+avg/mean:average
+max/min
+prev/next:previous
+init/mid/final:intermediate_results
+</code></pre><ul>
+<li>transfer input parameter names</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">plot_map</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    stack <span class="token operator">=</span> inspect<span class="token punctuation">.</span>stack<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    frame <span class="token operator">=</span> stack<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    locals_dict <span class="token operator">=</span> frame<span class="token punctuation">.</span>f_locals
+    <span class="token keyword keyword-for">for</span> var <span class="token keyword keyword-in">in</span> args<span class="token punctuation">:</span>
+        <span class="token keyword keyword-for">for</span> key<span class="token punctuation">,</span> value <span class="token keyword keyword-in">in</span> locals_dict<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword keyword-if">if</span> value <span class="token keyword keyword-is">is</span> var<span class="token punctuation">:</span>
+                hp<span class="token punctuation">.</span>mollview<span class="token punctuation">(</span>var<span class="token punctuation">,</span>title<span class="token operator">=</span><span class="token string-interpolation"><span class="token string">f'</span><span class="token interpolation"><span class="token punctuation">{</span>key<span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><ul>
+<li>save a plot to a directory in your home directory</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-import">import</span> os
+<span class="token keyword keyword-import">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword keyword-as">as</span> plt
+
+<span class="token comment"># Your code to generate a plot here...</span>
+
+<span class="token comment"># Define the directory where you want to save the file.</span>
+<span class="token comment"># This will be a directory named 'some_path' in your home directory.</span>
+directory <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>expanduser<span class="token punctuation">(</span><span class="token string">'~'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'some_path'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># If the directory does not exist, create it.</span>
+<span class="token keyword keyword-if">if</span> <span class="token keyword keyword-not">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>directory<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    os<span class="token punctuation">.</span>makedirs<span class="token punctuation">(</span>directory<span class="token punctuation">)</span>
+
+<span class="token comment"># Define the filename of the plot.</span>
+filename <span class="token operator">=</span> <span class="token string">'my_plot.png'</span>
+
+<span class="token comment"># Full path to the file</span>
+full_file_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>directory<span class="token punctuation">,</span> filename<span class="token punctuation">)</span>
+
+<span class="token comment"># Save the plot to the file.</span>
+plt<span class="token punctuation">.</span>savefig<span class="token punctuation">(</span>full_file_path<span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">300</span><span class="token punctuation">)</span>
+
+</code></pre><h2 id="docs">Docs </h2>
+<h3 id="tips">tips </h3>
+<ul>
+<li>Argument passing<br>
+sys.argv is a list in Python that contains the script name and any additional arguments passed to the script. When using the -c or -m options, sys.argv[0] is set to -c or the full name of the module, respectively. Any options found after -c or -m are not processed by the interpreter and are left in sys.argv for the command or module to handle.</li>
+<li>raw strings:print(r'some string')</li>
+<li>range() is not a list, but an object returns the successive items of hte desired sequence when you iterate over it. Called iterable</li>
+<li>dir() lists all the function and variable definition</li>
+<li>match statements</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">Point</span><span class="token punctuation">:</span>
+    x<span class="token punctuation">:</span> <span class="token builtin">int</span>
+    y<span class="token punctuation">:</span> <span class="token builtin">int</span>
+
+<span class="token keyword keyword-def">def</span> <span class="token function">where_is</span><span class="token punctuation">(</span>point<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-match">match</span> point<span class="token punctuation">:</span>
+        <span class="token keyword keyword-case">case</span> Point<span class="token punctuation">(</span>x<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> y<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Origin"</span><span class="token punctuation">)</span>
+        <span class="token keyword keyword-case">case</span> Point<span class="token punctuation">(</span>x<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> y<span class="token operator">=</span>y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Y=</span><span class="token interpolation"><span class="token punctuation">{</span>y<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+        <span class="token keyword keyword-case">case</span> Point<span class="token punctuation">(</span>x<span class="token operator">=</span>x<span class="token punctuation">,</span> y<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"X=</span><span class="token interpolation"><span class="token punctuation">{</span>x<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+        <span class="token keyword keyword-case">case</span> Point<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Somewhere else"</span><span class="token punctuation">)</span>
+        <span class="token keyword keyword-case">case</span> <span class="token keyword keyword-_">_</span><span class="token punctuation">:</span>
+            <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Not a point"</span><span class="token punctuation">)</span>
+</code></pre><h3 id="keywords-argment">keywords argment </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">cheeseshop</span><span class="token punctuation">(</span>kind<span class="token punctuation">,</span> <span class="token operator">*</span>arguments<span class="token punctuation">,</span> <span class="token operator">**</span>keywords<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"-- Do you have any"</span><span class="token punctuation">,</span> kind<span class="token punctuation">,</span> <span class="token string">"?"</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"-- I'm sorry, we're all out of"</span><span class="token punctuation">,</span> kind<span class="token punctuation">)</span>
+    <span class="token keyword keyword-for">for</span> arg <span class="token keyword keyword-in">in</span> arguments<span class="token punctuation">:</span>
+        <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>arg<span class="token punctuation">)</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"-"</span> <span class="token operator">*</span> <span class="token number">40</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-for">for</span> kw <span class="token keyword keyword-in">in</span> keywords<span class="token punctuation">:</span>
+        <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>kw<span class="token punctuation">,</span> <span class="token string">":"</span><span class="token punctuation">,</span> keywords<span class="token punctuation">[</span>kw<span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre><h3 id="special-parameters">Special parameters </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">f</span><span class="token punctuation">(</span>pos1<span class="token punctuation">,</span> pos2<span class="token punctuation">,</span> <span class="token operator">/</span><span class="token punctuation">,</span> pos_or_kwd<span class="token punctuation">,</span> <span class="token operator">*</span><span class="token punctuation">,</span> kwd1<span class="token punctuation">,</span> kwd2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+      <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>    <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>     <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+        <span class="token operator">|</span>             <span class="token operator">|</span>                  <span class="token operator">|</span>
+        <span class="token operator">|</span>        Positional <span class="token keyword keyword-or">or</span> keyword   <span class="token operator">|</span>
+        <span class="token operator">|</span>                                <span class="token operator">-</span> Keyword only
+         <span class="token operator">-</span><span class="token operator">-</span> Positional only
+</code></pre><h3 id="walrus-operator">walrus operator </h3>
+<p>assign expression value to a variable</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>x <span class="token operator">:=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Enter a number: "</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>isdigit<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword keyword-and">and</span> <span class="token punctuation">(</span>x <span class="token operator">:=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"You entered a positive number!"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-else">else</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"You entered a non-positive number."</span><span class="token punctuation">)</span>
+</code></pre><h3 id="looping-techniques">Looping Techniques </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>dictinary<span class="token punctuation">:</span>
+knights <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'gallahad'</span><span class="token punctuation">:</span> <span class="token string">'the pure'</span><span class="token punctuation">,</span> <span class="token string">'robin'</span><span class="token punctuation">:</span> <span class="token string">'the brave'</span><span class="token punctuation">}</span>
+<span class="token keyword keyword-for">for</span> k<span class="token punctuation">,</span> v <span class="token keyword keyword-in">in</span> knights<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>k<span class="token punctuation">,</span> v<span class="token punctuation">)</span>
+sequence<span class="token punctuation">:</span>
+<span class="token keyword keyword-for">for</span> i<span class="token punctuation">,</span> v <span class="token keyword keyword-in">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'tic'</span><span class="token punctuation">,</span> <span class="token string">'tac'</span><span class="token punctuation">,</span> <span class="token string">'toe'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> v<span class="token punctuation">)</span>
+many sequences<span class="token punctuation">:</span>
+questions <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token string">'quest'</span><span class="token punctuation">,</span> <span class="token string">'favorite color'</span><span class="token punctuation">]</span>
+answers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'lancelot'</span><span class="token punctuation">,</span> <span class="token string">'the holy grail'</span><span class="token punctuation">,</span> <span class="token string">'blue'</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-for">for</span> q<span class="token punctuation">,</span> a <span class="token keyword keyword-in">in</span> <span class="token builtin">zip</span><span class="token punctuation">(</span>questions<span class="token punctuation">,</span> answers<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">'What is your {0}?  It is {1}.'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>q<span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre><h3 id="formatted-string">formatted string </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>bugs <span class="token operator">=</span> <span class="token string">'roaches'</span>
+count <span class="token operator">=</span> <span class="token number">13</span>
+area <span class="token operator">=</span> <span class="token string">'living room'</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'Debugging </span><span class="token interpolation"><span class="token punctuation">{</span>bugs<span class="token operator">=</span><span class="token punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token punctuation">{</span>count<span class="token operator">=</span><span class="token punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token punctuation">{</span>area<span class="token operator">=</span><span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">)</span>
+<span class="token comment"># Debugging bugs='roaches' count=13 area='living room'</span>
+</code></pre><h3 id="save-list-and-dict-in-a-json-file">save list and dict in a json file </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-import">import</span> json
+x <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'an'</span><span class="token punctuation">,</span><span class="token string">'example'</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-with">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'filename'</span><span class="token punctuation">,</span><span class="token string">'r+'</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> f<span class="token punctuation">:</span>
+    json<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>x<span class="token punctuation">,</span> f<span class="token punctuation">)</span>
+    copy_of_x <span class="token operator">=</span> json<span class="token punctuation">.</span>load<span class="token punctuation">(</span>f<span class="token punctuation">)</span>
+</code></pre><h3 id="namespace">namespace </h3>
+<p>namespace is a mapping from names to object. Most namespaces are implemented as Python dictionaries.</p>
+<h3 id="static-method">static method </h3>
+<p>a method belongs to a class rather than an instance of the class.(we don't need the self to be passed)</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">Calculator</span><span class="token punctuation">:</span>
+
+    <span class="token comment"># create addNumbers static method</span>
+    <span class="token decorator annotation punctuation">@staticmethod</span>
+    <span class="token keyword keyword-def">def</span> <span class="token function">addNumbers</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword keyword-return">return</span> x <span class="token operator">+</span> y
+
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">'Product:'</span><span class="token punctuation">,</span> Calculator<span class="token punctuation">.</span>addNumbers<span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">110</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre><h3 id="super-method">super method </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">Parent</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-def">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Parent class initialization"</span><span class="token punctuation">)</span>
+
+    <span class="token keyword keyword-def">def</span> <span class="token function">some_method</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Parent class method"</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Child</span><span class="token punctuation">(</span>Parent<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-def">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># Call the __init__ method of the parent class</span>
+        <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Child class initialization"</span><span class="token punctuation">)</span>
+
+    <span class="token keyword keyword-def">def</span> <span class="token function">some_method</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>some_method<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># Call the parent class's implementation of some_method</span>
+        <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Child class method"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Create an instance of Child</span>
+child <span class="token operator">=</span> Child<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># Output:</span>
+<span class="token comment"># Parent class initialization</span>
+<span class="token comment"># Child class initialization</span>
+
+child<span class="token punctuation">.</span>some_method<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># Output:</span>
+<span class="token comment"># Parent class method</span>
+<span class="token comment"># Child class method</span>
+</code></pre><h3 id="dataclass">dataclass </h3>
+<p>dataclass is a decorator available in Python 3.7 and later versions that can be used to automatically generate special methods for classes, such as the <strong>init</strong>, <strong>repr</strong>, and <strong>eq</strong> methods, based on class attributes. The primary purpose of data classes is to simplify the creation of classes that mostly serve as containers for data and require minimal behavior.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-from">from</span> dataclasses <span class="token keyword keyword-import">import</span> dataclass
+
+<span class="token decorator annotation punctuation">@dataclass</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Point</span><span class="token punctuation">:</span>
+    x<span class="token punctuation">:</span> <span class="token builtin">float</span>
+    y<span class="token punctuation">:</span> <span class="token builtin">float</span>
+
+p1 <span class="token operator">=</span> Point<span class="token punctuation">(</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">2.0</span><span class="token punctuation">)</span>
+p2 <span class="token operator">=</span> Point<span class="token punctuation">(</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">2.0</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>p1<span class="token punctuation">)</span>  <span class="token comment"># Output: Point(x=1.0, y=2.0)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>p1 <span class="token operator">==</span> p2<span class="token punctuation">)</span>  <span class="token comment"># Output: True</span>
+</code></pre><h3 id="python-directory-structure">python directory structure </h3>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown markdown"><code>my_project/
+├── data/
+│   ├── raw/
+│   ├── processed/
+│   └── output/
+├── src/
+│   ├── <span class="token bold"><span class="token punctuation">__</span><span class="token content">init</span><span class="token punctuation">__</span></span>.py
+│   ├── main.py
+│   ├── utils/
+│   │   ├── <span class="token bold"><span class="token punctuation">__</span><span class="token content">init</span><span class="token punctuation">__</span></span>.py
+│   │   └── helpers.py
+│   └── models/
+│       ├── <span class="token bold"><span class="token punctuation">__</span><span class="token content">init</span><span class="token punctuation">__</span></span>.py
+│       └── my_model.py
+├── tests/
+│   ├── <span class="token bold"><span class="token punctuation">__</span><span class="token content">init</span><span class="token punctuation">__</span></span>.py
+│   ├── test_helpers.py
+│   └── test_my_model.py
+├── docs/
+├── README.md
+└── setup.py
+</code></pre><h3 id="iterable-and-iterator">iterable and iterator </h3>
+<p>list, set, dict.items() are all iterable<br>
+Iterating over an iterable: An iterable is an object that implements the <strong>iter</strong>() method, which returns an iterator. When you use a for loop (or other iteration construct) on an iterable, Python automatically calls iter() on the object to get an iterator, and then calls next() on the iterator to get the values one by one. Once all values have been retrieved and next() is called again, the iterator raises a StopIteration exception, which Python catches and handles by ending the loop.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>my_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>  <span class="token comment"># a list is an iterable</span>
+<span class="token keyword keyword-for">for</span> item <span class="token keyword keyword-in">in</span> my_list<span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>  <span class="token comment"># prints 1, then 2, then 3</span>
+my_iterator <span class="token operator">=</span> <span class="token builtin">iter</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># create an iterator from a list</span>
+
+<span class="token keyword keyword-for">for</span> item <span class="token keyword keyword-in">in</span> my_iterator<span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>  <span class="token comment"># prints 1, then 2, then 3</span>
+
+<span class="token keyword keyword-for">for</span> item <span class="token keyword keyword-in">in</span> my_iterator<span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>  <span class="token comment"># prints nothing, because the iterator is exhausted</span>
+</code></pre><h1 id="archlinux">ArchLinux </h1>
+<h2 id="pacman">pacman </h2>
+<ul>
+<li>new server</li>
+</ul>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>pacman <span class="token parameter variable">-Syu</span>
+pacman <span class="token parameter variable">-S</span> packagename
+</code></pre>
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
